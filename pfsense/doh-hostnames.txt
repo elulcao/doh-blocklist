@@ -1,10 +1,20 @@
-# DoH Hostnames Blocklist for pfSense/Unbound
-# Blocks common DNS-over-HTTPS providers
+# DNS-over-HTTPS minimal blocklist
 
-# Cloudflare DoH
-dns.cloudflare.com
+
+# Purpose: prevent browser/app DoH bypass
+# Scope: DNS-only endpoints (safe)
+# Tested with: Pi-hole + pfSense + Unbound
+#
+# IMPORTANT:
+# - Do NOT add CDN or base domains
+# - This list is intentionally minimal
+
+# Cloudflare DoH (endpoints)
 cloudflare-dns.com
+mozilla.cloudflare-dns.com
 1dot1dot1dot1.cloudflare-dns.com
+security.cloudflare-dns.com
+family.cloudflare-dns.com
 
 # Google DoH
 dns.google
@@ -17,30 +27,30 @@ dns9.quad9.net
 dns10.quad9.net
 dns11.quad9.net
 
-# AdGuard DoH
-dns.adguard.com
-dns-family.adguard.com
-dns-unfiltered.adguard.com
+# NextDNS (base; subdomains handled best via Pi-hole regex)
+dns.nextdns.io
 
-# OpenDNS/Cisco DoH
+# OpenDNS / Cisco Umbrella DoH
 doh.opendns.com
 doh.familyshield.opendns.com
-
-# Mozilla DoH
-mozilla.cloudflare-dns.com
-
-# NextDNS
-*.dns.nextdns.io
-
-# Control D
-*.controld.com
-
-# BlahDNS
-*.blahdns.com
+doh.umbrella.com
 
 # DNS.SB
 doh.dns.sb
 doh.sb
 
-# CIRA Canadian Shield
-*.canadianshield.cira.ca
+# CIRA Canadian Shield (explicit common endpoints)
+private.canadianshield.cira.ca
+protected.canadianshield.cira.ca
+family.canadianshield.cira.ca
+
+# ControlD (base; subdomains handled best via Pi-hole regex)
+controld.com
+
+# BlahDNS (base)
+blahdns.com
+
+# AdGuard (use known active)
+dns.adguard-dns.com
+family.adguard-dns.com
+unfiltered.adguard-dns.com
