@@ -15,7 +15,7 @@ dns.google.com
 dns.quad9.net
 dns9.quad9.net
 dns10.quad9.net
-dns11.quad9.quad9.net
+dns11.quad9.net
 
 # AdGuard DoH
 dns.adguard.com
