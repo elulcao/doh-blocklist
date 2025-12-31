@@ -1,0 +1,49 @@
+# DNS-over-HTTPS minimal blocklist
+# Purpose: prevent browser/app DoH bypass
+# Scope: DNS-only endpoints (safe)
+# Tested with: Pi-hole + pfSense + Unbound
+#
+# IMPORTANT:
+# - Do NOT add CDN or base domains
+# - This list is intentionally minimal
+
+# Cloudflare DoH
+(\.|^)cloudflare-dns\.com$
+(\.|^)mozilla\.cloudflare-dns\.com$
+(\.|^)1dot1dot1dot1\.cloudflare-dns\.com$
+(\.|^)security\.cloudflare-dns\.com$
+(\.|^)family\.cloudflare-dns\.com$
+
+# Google DoH
+(\.|^)dns\.google$
+(\.|^)dns\.google\.com$
+(\.|^)8888\.google$
+
+# Quad9 DoH
+(\.|^)dns\.quad9\.net$
+(\.|^)dns9\.quad9\.net$
+(\.|^)dns10\.quad9\.net$
+(\.|^)dns11\.quad9\.net$
+
+# NextDNS
+(\.|^)dns\.nextdns\.io$
+
+# OpenDNS / Cisco Umbrella DoH
+(\.|^)doh\.opendns\.com$
+(\.|^)doh\.familyshield\.opendns\.com$
+(\.|^)doh\.umbrella\.com$
+
+# ControlD (optional)
+(\.|^)controld\.com$
+
+# DNS.SB
+(\.|^)doh\.dns\.sb$
+(\.|^)doh\.sb$
+
+# CIRA Canadian Shield
+(\.|^)canadianshield\.cira\.ca$
+
+# AdGuard (known common)
+(\.|^)dns\.adguard-dns\.com$
+(\.|^)family\.adguard-dns\.com$
+(\.|^)unfiltered\.adguard-dns\.com$
