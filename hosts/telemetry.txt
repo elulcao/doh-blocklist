@@ -1,0 +1,29 @@
+# Title: Telemetry Safe Blocklist
+# Description: Blocks telemetry, analytics and marketing domains while avoiding service breakage.
+# Version: 2026.07.04.1
+# Last modified: 2026-07-04 18:30 UTC
+# Expires: 1 day
+# Homepage: https://github.com/elulcao/dns-blocklist
+# License: MIT
+#
+# Domains:
+
+udc.yahoo.com
+s.youtube.com
+tagmanager.google.com
+eu.posthog.com
+us.i.posthog.com
+posthog.com
+rudderstack.com
+snowplowanalytics.com
+siftscience.com
+bnc.lt
+qevents.quora.com
+weather-analytics-events.apple.com
+xp.apple.com
+ngfts.lge.com
+shareasale-analytics.com
+zenaps.com
+clientstream.launchdarkly.com
+klaviyo.com
+customer.io
